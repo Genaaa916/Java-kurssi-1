@@ -107,6 +107,7 @@ public class App {
                     File filu = new File("Biisit.txt");
                     Scanner filuLukija = new Scanner(filu);
                     ArrayList tiedot = new ArrayList<>();
+                    i = biisiValikoima.size() + 1;
                     while (filuLukija.hasNextLine()) {
                         String rivi = filuLukija.nextLine();
                         String[] tietoRivi = rivi.split(": ");
@@ -123,7 +124,6 @@ public class App {
                             tiedot.clear();
                         }
                     }
-                    i = biisiValikoima.size() + 1;
                 } catch (FileNotFoundException e) {
                     System.out.println("Tiedostoa ei löydy.");
                     e.printStackTrace();
