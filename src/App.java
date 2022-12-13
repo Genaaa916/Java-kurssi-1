@@ -21,6 +21,16 @@ public class App {
         return true;
     }
 
+    public static void tulosta(HashMap biisiValikoima) {
+
+        // iteroidaan hashmap per joka key/value, printataan pelkkä value toStringillä
+        biisiValikoima.forEach((z, y) -> System.out.println((y)));
+        // jos tyhjä biisivalkoima
+        if (biisiValikoima.size() < 1) {
+            System.out.println("Ei biisejä.");
+        }
+    }
+
     public static void main(String[] args) throws Exception {
         // luodaan hashmap, ja iteraattori tunnistenroa varten
         Map<Integer, Object> biisiValikoima = new HashMap<>();
