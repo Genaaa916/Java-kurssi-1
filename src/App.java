@@ -105,8 +105,16 @@ public class App {
         String biisi;
         System.out.println("Minkä nimisen biisin haluat lisätä?");
         biisi = lukija.nextLine();
+        while (biisi.isEmpty()) {
+            System.out.println("Nimi ei voi olla tyhjä.");
+            biisi = lukija.nextLine();
+        }
         System.out.println("Mikä on artistin nimi?");
         nimi = lukija.nextLine();
+        while (nimi.isEmpty()) {
+            System.out.println("Nimi ei voi olla tyhjä.");
+            nimi = lukija.nextLine();
+        }
         String kestoStr = "";
         while (true) {
             System.out.println("Mikä on biisin kesto?");
