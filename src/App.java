@@ -101,10 +101,12 @@ public class App {
     // lisätään biisi ohjelmaan
     public static int lisaaBiisi(int i, Map<Integer, Object> bV) {
         Scanner lukija = new Scanner(System.in);
+        String nimi;
+        String biisi;
         System.out.println("Minkä nimisen biisin haluat lisätä?");
-        String biisi = lukija.nextLine();
+        biisi = lukija.nextLine();
         System.out.println("Mikä on artistin nimi?");
-        String nimi = lukija.nextLine();
+        nimi = lukija.nextLine();
         String kestoStr = "";
         while (true) {
             System.out.println("Mikä on biisin kesto?");
@@ -170,4 +172,3 @@ public class App {
         }
     }
 }
-// TODO: iteraattori ei kasva oikein, biisit tallentuu päällekkäin, korjaa bugi
