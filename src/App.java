@@ -22,9 +22,9 @@ public class App {
     }
 
     // printataan kaikki hashmapin biisit
-    public static void tulosta(Map<Integer, Object> biisiValikoima) {
-        biisiValikoima.forEach((z, y) -> System.out.println((y)));
-        if (biisiValikoima.size() < 1) {
+    public static void tulosta(Map<Integer, Object> bV) {
+        bV.forEach((z, y) -> System.out.println(((y)) + " \n"));
+        if (bV.size() < 1) {
             System.out.println("Ei biisejä.");
         }
     }
@@ -32,7 +32,7 @@ public class App {
     // poistetaan yksi biisi ohjelmasta
     public static void poista(Map<Integer, Object> bV) {
         Scanner lukija = new Scanner(System.in);
-        bV.forEach((z, y) -> System.out.println((y)));
+        bV.forEach((z, y) -> System.out.println(((y)) + " \n"));
         System.out.println("Minkä biisin haluat poistaa? \nSyötä tunnistenumero:");
         int poistoNro = Integer.valueOf(lukija.nextLine());
         if (bV.containsKey(poistoNro)) {
