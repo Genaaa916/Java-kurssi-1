@@ -6,6 +6,7 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.FileNotFoundException;
+import java.util.Random;
 
 public class App {
     // validoidaan käyttäjän syöte, otetaan kiinni NFE
@@ -145,7 +146,8 @@ public class App {
         // luodaan hashmap, ja biisin id-muuttuja
         Map<Integer, Object> biisiValikoima = new HashMap<>();
         Scanner lukija = new Scanner(System.in);
-        int i = 1;
+        Random random = new Random();
+        int i = random.nextInt(50);
         // käyttöliittymän looppi
         while (true) {
             String kayttis = "Mitä haluat tehdä? Valitse 1-7 \n1. Lisää uusi biisi \n2. Näytä nykyiset biisit \n3. Poista biisi\n4. Tyhjennä biisilista \n5. Tallenna tiedostoon \n6. Tuo tiedostosta \n7. Poistu";
@@ -160,7 +162,7 @@ public class App {
             switch (x) {
                 case 1:
                     lisaaBiisi(i, biisiValikoima);
-                    i += (biisiValikoima.size() * 50);
+                    i += (biisiValikoima.size() * 5);
                     break;
                 case 2:
                     tulosta(biisiValikoima);
@@ -176,7 +178,7 @@ public class App {
                     break;
                 case 6:
                     tuo(biisiValikoima, i);
-                    i += (biisiValikoima.size() * 60);
+                    i += (biisiValikoima.size() * 6);
                     break;
                 case 7:
                     System.out.println("Halusit poistua. Hyvää päivänjatkoa!");
