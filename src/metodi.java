@@ -1,8 +1,6 @@
 import java.util.Map;
 import java.util.Scanner;
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -10,6 +8,7 @@ import java.io.FileNotFoundException;
 
 public class metodi {
 
+    // validoidaan käyttäjän syöte, otetaan kiinni NFE
     public static boolean onkoLuku(String str) {
         if (str == null) {
             return false;
