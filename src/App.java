@@ -170,4 +170,3 @@ public class App {
         }
     }
 }
-// TODO: iteraattori ei kasva oikein, biisit tallentuu päällekkäin, korjaa bugi
