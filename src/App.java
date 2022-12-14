@@ -13,11 +13,10 @@ public class App {
         int i = random.nextInt(50);
         // käyttöliittymän looppi
         while (true) {
-            String kayttis = "Mitä haluat tehdä? Valitse 1-7 \n1. Lisää uusi biisi \n2. Näytä nykyiset biisit \n3. Poista biisi\n4. Tyhjennä biisilista \n5. Tallenna tiedostoon \n6. Tuo tiedostosta \n7. Poistu";
-            System.out.println(kayttis);
+            System.out.println(metodi.kayttis);
             String s = lukija.nextLine();
             while (!metodi.onkoLuku(s)) {
-                System.out.println(kayttis);
+                System.out.println(metodi.kayttis);
                 s = lukija.nextLine();
             }
             int x = Integer.parseInt(s);

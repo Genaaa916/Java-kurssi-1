@@ -21,6 +21,8 @@ public class metodi {
         return true;
     }
 
+    static String kayttis = "Mitä haluat tehdä? Valitse 1-7 \n1. Lisää uusi biisi \n2. Näytä nykyiset biisit \n3. Poista biisi\n4. Tyhjennä biisilista \n5. Tallenna tiedostoon \n6. Tuo tiedostosta \n7. Poistu";
+
     // printataan kaikki hashmapin biisit
     public static void tulosta(Map<Integer, Object> bV) {
         bV.forEach((z, y) -> System.out.println(((y)) + " \n"));
