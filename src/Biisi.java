@@ -1,14 +1,21 @@
+import java.util.Arrays;
+
 public class Biisi {
-    public int numero;
-    public String nimi;
-    public String artisti;
-    public Double pituus;
+    private int numero;
+    String nimi;
+    String artisti;
+    private Double pituus;
+    private String[] palvelut;
 
     public Biisi(String laulu, String artisti, Double kesto, int nro) {
         this.nimi = laulu;
         this.artisti = artisti;
         this.pituus = kesto;
         this.numero = nro;
+    }
+
+    public void lisaaPalvelu(String[] lista) {
+        this.palvelut = lista;
     }
 
     /*
@@ -30,7 +37,7 @@ public class Biisi {
 
     public String toString() {
         return "Tunniste: " + numero + "\n Nimi: " + nimi + "\n Artisti: " + artisti + "\n Pituus: " + pituus
-                + " min";
+                + " min" + "\n Loytyy palveluista: " + Arrays.toString(palvelut);
 
     }
 }
