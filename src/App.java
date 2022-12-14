@@ -156,7 +156,7 @@ public class App {
             switch (x) {
                 case 1:
                     lisaaBiisi(i, biisiValikoima);
-                    i = biisiValikoima.size() + 1;
+                    i += biisiValikoima.size();
                     break;
                 case 2:
                     tulosta(biisiValikoima);
@@ -172,7 +172,7 @@ public class App {
                     break;
                 case 6:
                     tuo(biisiValikoima, i);
-                    i = biisiValikoima.size() + 1;
+                    i += biisiValikoima.size();
                     break;
                 case 7:
                     System.out.println("Halusit poistua. Hyvää päivänjatkoa!");
