@@ -35,8 +35,12 @@ public class App {
         bV.forEach((z, y) -> System.out.println((y)));
         System.out.println("Minkä biisin haluat poistaa? \nSyötä tunnistenumero:");
         int poistoNro = Integer.valueOf(lukija.nextLine());
-        System.out.println("Poistettiin biisi " + ((Biisi) bV.get(poistoNro)).getNimi());
-        bV.remove(poistoNro);
+        if (bV.containsKey(poistoNro)) {
+            System.out.println("Poistettiin biisi " + ((Biisi) bV.get(poistoNro)).getNimi());
+            bV.remove(poistoNro);
+        } else {
+            System.out.println("Tunnistenumerolla ei löydy biisiä.");
+        }
     }
 
     // poistetaan kaikki biisit ohjelmasta
