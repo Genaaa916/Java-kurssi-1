@@ -21,7 +21,16 @@ public class metodi {
         return true;
     }
 
-    static String kayttis = "Mitä haluat tehdä? Valitse 1-7 \n1. Lisää uusi biisi \n2. Näytä nykyiset biisit \n3. Poista biisi\n4. Tyhjennä biisilista \n5. Tallenna tiedostoon \n6. Tuo tiedostosta \n7. Poistu";
+    public static void kayttis() {
+        String kayttisStr = "Mitä haluat tehdä? Valitse 1-7 \n1. Lisää uusi biisi \n2. Näytä nykyiset biisit \n3. Poista biisi\n4. Tyhjennä biisilista \n5. Tallenna tiedostoon \n6. Tuo tiedostosta \n7. Poistu";
+        System.out.println(kayttisStr);
+    }
+
+    // poistutaan
+    public static void poistu() {
+        String poistu = "Halusit poistua. Hyvää päivänjatkoa!";
+        System.out.println(poistu);
+    }
 
     // printataan kaikki hashmapin biisit
     public static void tulosta(Map<Integer, Object> bV) {

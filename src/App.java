@@ -13,10 +13,10 @@ public class App {
         int i = random.nextInt(50);
         // käyttöliittymän looppi
         while (true) {
-            System.out.println(metodi.kayttis);
+            metodi.kayttis();
             String s = lukija.nextLine();
             while (!metodi.onkoLuku(s)) {
-                System.out.println(metodi.kayttis);
+                metodi.kayttis();
                 s = lukija.nextLine();
             }
             int x = Integer.parseInt(s);
@@ -43,7 +43,7 @@ public class App {
                     i += (biisiValikoima.size() * 6);
                     break;
                 case 7:
-                    System.out.println("Halusit poistua. Hyvää päivänjatkoa!");
+                    metodi.poistu();
                     return;
             }
         }
