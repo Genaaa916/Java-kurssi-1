@@ -106,7 +106,7 @@ public class App {
         System.out.println("Minkä nimisen biisin haluat lisätä?");
         biisi = lukija.nextLine();
         while (biisi.isEmpty()) {
-            System.out.println("Nimi ei voi olla tyhjä.");
+            System.out.println("Nimi ei voi olla tyhjä. ");
             biisi = lukija.nextLine();
         }
         System.out.println("Mikä on artistin nimi?");
@@ -127,10 +127,11 @@ public class App {
         }
         Double kesto = Double.parseDouble(kestoStr);
         Biisi uusibiisi = new Biisi(biisi, nimi, kesto, i);
-        System.out.println("Mistä palveluista biisi löytyy?");
-        String[] palveluLista = lukija.nextLine().split(", ");
-        uusibiisi.lisaaPalvelu(palveluLista);
-        bV.put(i, uusibiisi);
+        /*
+         * System.out.println("Mistä palveluista biisi löytyy?");
+         * String[] palveluLista = lukija.nextLine().split(", ");
+         * uusibiisi.lisaaPalvelu(palveluLista);
+         */ bV.put(i, uusibiisi);
         System.out.println(
                 String.format("Lisättiin biisi %s", uusibiisi.nimi, " artistilta %s", uusibiisi.artisti, "."));
         return i;

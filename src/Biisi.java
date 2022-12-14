@@ -5,8 +5,10 @@ public class Biisi {
     String nimi;
     String artisti;
     private Double pituus;
-    private String[] palvelut;
 
+    /*
+     * private String[] palvelut;
+     */
     public Biisi(String laulu, String artisti, Double kesto, int nro) {
         this.nimi = laulu;
         this.artisti = artisti;
@@ -14,10 +16,11 @@ public class Biisi {
         this.numero = nro;
     }
 
-    public void lisaaPalvelu(String[] lista) {
-        this.palvelut = lista;
-    }
-
+    /*
+     * public void lisaaPalvelu(String[] lista) {
+     * this.palvelut = lista;
+     * }
+     */
     /*
      * public void lisaaNro(int nro) {
      * this.numero = nro;
@@ -37,7 +40,7 @@ public class Biisi {
 
     public String toString() {
         return "Tunniste: " + numero + "\n Nimi: " + nimi + "\n Artisti: " + artisti + "\n Pituus: " + pituus
-                + " min" + "\n Loytyy palveluista: " + Arrays.toString(palvelut);
+                + " min" /* + "\n Loytyy palveluista: " + Arrays.toString(palvelut) */;
 
     }
 }
