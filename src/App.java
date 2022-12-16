@@ -39,10 +39,13 @@ public class App {
                     metodi.vie(biisiValikoima);
                     break;
                 case 6:
+                    metodi.haeArtistilla(biisiValikoima);
+                    break;
+                case 7:
                     metodi.tuo(biisiValikoima, i);
                     i += (biisiValikoima.size() * 6);
                     break;
-                case 7:
+                case 8:
                     metodi.poistu();
                     return;
             }

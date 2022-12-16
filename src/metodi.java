@@ -1,6 +1,7 @@
 import java.util.Map;
 import java.util.Scanner;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -38,6 +39,24 @@ public class metodi {
         if (bV.size() < 1) {
             System.out.println("Ei biisejä.");
         }
+    }
+
+    // haetaan biisiä valikoimasta artistin nimellä
+    public static void haeArtistilla(Map<Integer, Object> bV) {
+        Scanner lukija = new Scanner(System.in);
+        String haku = lukija.nextLine();
+        Collection<Object> val = bV.values();
+        Boolean loytyi = false;
+        for (Object o : val) {
+            if (((Biisi) o).getNimi().equals(haku)) {
+                System.out.println(o);
+                loytyi = true;
+            }
+        }
+        if (!loytyi) {
+            System.out.println("Nimellä ei löydy biisiä.");
+        }
+
     }
 
     // poistetaan yksi biisi ohjelmasta

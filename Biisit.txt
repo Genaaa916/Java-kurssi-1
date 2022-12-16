@@ -1,3 +1,8 @@
+Tunniste: 32
+ Nimi: y
+ Artisti: x
+ Pituus: 5.5 min
+ // 
 Tunniste: 16
  Nimi: Biisi3
  Artisti: Artisti3
@@ -22,6 +27,16 @@ Tunniste: 6
  Nimi: Biisi2
  Artisti: Artisti2
  Pituus: 4.5 min
+ // 
+Tunniste: 42
+ Nimi: x
+ Artisti: y
+ Pituus: 4.5 min
+ // 
+Tunniste: 27
+ Nimi: x
+ Artisti: y
+ Pituus: 5.5 min
  // 
 Tunniste: 14
  Nimi: lol
