@@ -89,8 +89,9 @@ public class metodi {
     }
 
     // tuo biisit tiedostosta biisit.txt
-    public static int tuo(Map<Integer, Object> biisiValikoima, int i) {
+    public static int tuo(Map<Integer, Object> biisiValikoima) {
         Random random = new Random();
+        int i = random.nextInt(99);
         int r = random.nextInt(99);
         try {
             File filu = new File("Biisit.txt");
@@ -143,9 +144,11 @@ public class metodi {
     }
 
     // lisätään biisi ohjelmaan
-    public static int lisaaBiisi(int i, Map<Integer, Object> bV) {
+    public static void lisaaBiisi(Map<Integer, Object> bV) {
         Scanner lukija = new Scanner(System.in);
         String nimi;
+        Random random = new Random();
+        int i = random.nextInt(99);
         String biisi;
         System.out.println("Minkä nimisen biisin haluat lisätä?");
         biisi = lukija.nextLine();
@@ -171,14 +174,16 @@ public class metodi {
         }
         Double kesto = Double.parseDouble(kestoStr);
         Biisi uusibiisi = new Biisi(biisi, nimi, kesto, i);
-        /*
-         * System.out.println("Mistä palveluista biisi löytyy?");
-         * String[] palveluLista = lukija.nextLine().split(", ");
-         * uusibiisi.lisaaPalvelu(palveluLista);
-         */ bV.put(i, uusibiisi);
-        System.out.println(
-                String.format("Lisättiin biisi %s", uusibiisi.nimi, " artistilta %s", uusibiisi.artisti, "."));
-        return i;
-    }
+        int r = random.nextInt(99);
+        if (!bV.containsKey(i)) {
+            bV.put(i, uusibiisi);
+        } else {
+            uusibiisi.numero = r;
+            i = r;
+            bV.put(i, uusibiisi);
+            System.out.println(
+                    String.format("Lisättiin biisi %s", uusibiisi.nimi, " artistilta %s", uusibiisi.artisti, "."));
+        }
 
+    }
 }

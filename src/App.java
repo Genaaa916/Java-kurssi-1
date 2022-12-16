@@ -1,7 +1,6 @@
 import java.util.Scanner;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Random;
 
 public class App {
 
@@ -9,8 +8,6 @@ public class App {
         // luodaan hashmap, ja biisin id-muuttuja
         Map<Integer, Object> biisiValikoima = new HashMap<>();
         Scanner lukija = new Scanner(System.in);
-        Random random = new Random();
-        int i = random.nextInt(50);
         // käyttöliittymän looppi
         while (true) {
             metodi.kayttis();
@@ -23,8 +20,7 @@ public class App {
 
             switch (x) {
                 case 1:
-                    metodi.lisaaBiisi(i, biisiValikoima);
-                    i += (biisiValikoima.size() * 5);
+                    metodi.lisaaBiisi(biisiValikoima);
                     break;
                 case 2:
                     metodi.tulosta(biisiValikoima);
@@ -42,8 +38,7 @@ public class App {
                     metodi.haeArtistilla(biisiValikoima);
                     break;
                 case 7:
-                    metodi.tuo(biisiValikoima, i);
-                    i += (biisiValikoima.size() * 6);
+                    metodi.tuo(biisiValikoima);
                     break;
                 case 8:
                     metodi.poistu();
