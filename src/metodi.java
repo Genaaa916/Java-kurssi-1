@@ -1,4 +1,5 @@
 import java.util.Map;
+import java.util.Random;
 import java.util.Scanner;
 import java.util.ArrayList;
 import java.util.Collection;
@@ -89,6 +90,8 @@ public class metodi {
 
     // tuo biisit tiedostosta biisit.txt
     public static int tuo(Map<Integer, Object> biisiValikoima, int i) {
+        Random random = new Random();
+        int r = random.nextInt(99);
         try {
             File filu = new File("Biisit.txt");
             Scanner filuLukija = new Scanner(filu);
@@ -105,7 +108,13 @@ public class metodi {
                     Double kesto = Double.valueOf(biisiPala[0]);
                     Integer nro = Integer.parseInt(tiedot.get(0) + "");
                     Biisi uusibiisi = new Biisi(biisi, artisti, kesto, nro);
-                    biisiValikoima.put(nro, uusibiisi);
+                    if (!biisiValikoima.containsKey(nro)) {
+                        biisiValikoima.put(nro, uusibiisi);
+                    } else {
+                        uusibiisi.numero = r;
+                        nro = r;
+                        biisiValikoima.put(nro, uusibiisi);
+                    }
                     tiedot.clear();
                 }
             }

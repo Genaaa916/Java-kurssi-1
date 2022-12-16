@@ -1,7 +1,7 @@
 /* import java.util.Arrays;
  */
 public class Biisi {
-    private int numero;
+    int numero;
     String nimi;
     String artisti;
     private Double pituus;
