@@ -23,7 +23,7 @@ public class metodi {
     }
 
     public static void kayttis() {
-        String kayttisStr = "Mitä haluat tehdä? Valitse 1-7 \n1. Lisää uusi biisi \n2. Näytä nykyiset biisit \n3. Poista biisi\n4. Tyhjennä biisilista \n5. Tallenna tiedostoon \n6. Tuo tiedostosta \n7. Poistu";
+        String kayttisStr = "Mitä haluat tehdä? Valitse 1-7 \n1. Lisää uusi biisi \n2. Näytä nykyiset biisit \n3. Poista biisi\n4. Tyhjennä biisilista \n5. Tallenna tiedostoon \n6. Hae artistin nimellä \n7. Tuo tiedostosta \n7. Poistu";
         System.out.println(kayttisStr);
     }
 
