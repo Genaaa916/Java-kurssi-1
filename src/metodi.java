@@ -44,6 +44,7 @@ public class metodi {
     // haetaan biisiä valikoimasta artistin nimellä
     public static void haeArtistilla(Map<Integer, Object> bV) {
         Scanner lukija = new Scanner(System.in);
+        System.out.println("Syötä artistin nimi: ");
         String haku = lukija.nextLine();
         Collection<Object> val = bV.values();
         Boolean loytyi = false;
