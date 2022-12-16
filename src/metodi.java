@@ -126,17 +126,16 @@ public class metodi {
                     Double kesto = Double.valueOf(biisiPala[0]);
                     Integer nro = Integer.parseInt(tiedot.get(0) + "");
                     Biisi uusibiisi = new Biisi(biisi, artisti, kesto, nro);
-                    if (!biisiValikoima.containsKey(nro)) {
-                        biisiValikoima.put(nro, uusibiisi);
-                    } else {
-                        uusibiisi.numero = r;
-                        nro = r;
-                        biisiValikoima.put(nro, uusibiisi);
+                    while (biisiValikoima.containsKey(nro)) {
+                        nro = random.nextInt(99);
                     }
+                    biisiValikoima.put(nro, uusibiisi);
                     tiedot.clear();
                 }
             }
-        } catch (FileNotFoundException e) {
+        } catch (
+
+        FileNotFoundException e) {
             System.out.println("Tiedostoa ei löydy.");
             e.printStackTrace();
         }
@@ -191,16 +190,11 @@ public class metodi {
         }
         Double kesto = Double.parseDouble(kestoStr);
         Biisi uusibiisi = new Biisi(biisi, nimi, kesto, i);
-        int r = random.nextInt(99);
-        if (!bV.containsKey(i)) {
-            bV.put(i, uusibiisi);
-        } else {
-            uusibiisi.numero = r;
-            i = r;
-            bV.put(i, uusibiisi);
-            System.out.println(
-                    String.format("Lisättiin biisi %s", uusibiisi.nimi, " artistilta %s", uusibiisi.artisti, "."));
+        while (bV.containsKey(i)) {
+            i = random.nextInt(99);
         }
-
+        bV.put(i, uusibiisi);
+        System.out.println(
+                String.format("Lisättiin biisi %s", uusibiisi.nimi, " artistilta %s", uusibiisi.artisti, "."));
     }
 }
