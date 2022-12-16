@@ -32,7 +32,7 @@ public class Biisi {
         return nimi;
     }
 
-    public String getBiisiNimi() {
+    public String getArtisti() {
         return artisti;
     }
 

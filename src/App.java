@@ -35,12 +35,14 @@ public class App {
                     metodi.vie(biisiValikoima);
                     break;
                 case 6:
-                    metodi.haeArtistilla(biisiValikoima);
+                    metodi.haeBiisilla(biisiValikoima);
                     break;
                 case 7:
+                    metodi.haeArtistilla(biisiValikoima);
+                case 8:
                     metodi.tuo(biisiValikoima);
                     break;
-                case 8:
+                case 9:
                     metodi.poistu();
                     return;
             }

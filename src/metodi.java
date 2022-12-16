@@ -24,7 +24,7 @@ public class metodi {
     }
 
     public static void kayttis() {
-        String kayttisStr = "Mitä haluat tehdä? Valitse 1-7 \n1. Lisää uusi biisi \n2. Näytä nykyiset biisit \n3. Poista biisi\n4. Tyhjennä biisilista \n5. Tallenna tiedostoon \n6. Hae biisin nimellä \n7. Tuo tiedostosta \n8. Poistu";
+        String kayttisStr = "Mitä haluat tehdä? Valitse 1-7 \n1. Lisää uusi biisi \n2. Näytä nykyiset biisit \n3. Poista biisi\n4. Tyhjennä biisilista \n5. Tallenna tiedostoon \n6. Hae biisin nimellä \n7. Hae artistin nimellä \n8. Tuo tiedostosta \n9. Poistu";
         System.out.println(kayttisStr);
     }
 
@@ -43,9 +43,9 @@ public class metodi {
     }
 
     // haetaan biisiä valikoimasta artistin nimellä
-    public static void haeArtistilla(Map<Integer, Object> bV) {
+    public static void haeBiisilla(Map<Integer, Object> bV) {
         Scanner lukija = new Scanner(System.in);
-        System.out.println("Syötä artistin nimi: ");
+        System.out.println("Syötä biisin nimi: ");
         String haku = lukija.nextLine();
         Collection<Object> val = bV.values();
         Boolean loytyi = false;
@@ -57,6 +57,23 @@ public class metodi {
         }
         if (!loytyi) {
             System.out.println("Nimellä ei löydy biisiä.");
+        }
+    }
+
+    public static void haeArtistilla(Map<Integer, Object> bV) {
+        Scanner lukija = new Scanner(System.in);
+        System.out.println("Syötä artistin nimi: ");
+        String haku = lukija.nextLine();
+        Collection<Object> val = bV.values();
+        Boolean loytyi = false;
+        for (Object o : val) {
+            if (((Biisi) o).getArtisti().equals(haku)) {
+                System.out.println(o);
+                loytyi = true;
+            }
+        }
+        if (!loytyi) {
+            System.out.println("Artistin nimellä ei löydy biisiä.");
         }
 
     }
