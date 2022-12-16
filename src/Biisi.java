@@ -32,6 +32,10 @@ public class Biisi {
         return nimi;
     }
 
+    public String getBiisiNimi() {
+        return artisti;
+    }
+
     /*
      * public String allStrings() {
      * return String.valueOf(numero + nimi + artisti + pituus);
